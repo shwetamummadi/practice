@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20190412 12:46:37.823" generator="Robot 3.1.1 (Python 2.7.16 on win32)">
+<suite source="D:\EclipseWorkspace\CurisHealth\TestCases\CurisTestSuite.robot" id="s1" name="CurisTestSuite">
+<test id="s1-t1" name="TS016 Appointment Search With Date Fields">
+<kw type="setup" name="Login To Curis Health" library="Curis_Keywords">
+<doc>Login with admin credential to curis health application</doc>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>LogIn as admin To Curis health app</arg>
+</arguments>
+<status status="PASS" endtime="20190412 12:46:38.150" starttime="20190412 12:46:38.149"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${AppUrl}</arg>
+<arg>${GoogleBrowser}</arg>
+</arguments>
+<msg timestamp="20190412 12:46:38.150" level="INFO">Opening browser 'GoogleChrome' to base url 'http://ggk-wrl-cs-2:8095/ehr-webapp/#/login'.</msg>
+<status status="PASS" endtime="20190412 12:46:41.824" starttime="20190412 12:46:38.150"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" endtime="20190412 12:46:43.000" starttime="20190412 12:46:41.824"></status>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<doc>Verifies that current page title equals ``title``.</doc>
+<arguments>
+<arg>CurisHealth</arg>
+</arguments>
+<msg timestamp="20190412 12:46:43.004" level="INFO">Page title is 'CurisHealth'.</msg>
+<status status="PASS" endtime="20190412 12:46:43.004" starttime="20190412 12:46:43.000"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${sUserName}</arg>
+<arg>${MediumWait}</arg>
+</arguments>
+<status status="PASS" endtime="20190412 12:46:43.021" starttime="20190412 12:46:43.004"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${sUserName}</arg>
+<arg>${UserName}</arg>
+</arguments>
+<msg timestamp="20190412 12:46:43.021" level="INFO">Typing text 'admin' into text field 'jquery=#appUsername'.</msg>
+<status status="PASS" endtime="20190412 12:46:43.106" starttime="20190412 12:46:43.021"></status>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<doc>Types the given password into text field identified by ``locator``.</doc>
+<arguments>
+<arg>${sPassword}</arg>
+<arg>${Pasword}</arg>
+</arguments>
+<msg timestamp="20190412 12:46:43.106" level="INFO">Typing password into text field 'jquery=#curisPwd'.</msg>
+<status status="PASS" endtime="20190412 12:46:43.185" starttime="20190412 12:46:43.106"></status>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<doc>Clicks button identified by ``locator``.</doc>
+<arguments>
+<arg>${sLoginSubmit}</arg>
+</arguments>
+<msg timestamp="20190412 12:46:43.186" level="INFO">Clicking button 'jquery=#loginMe'.</msg>
+<status status="PASS" endtime="20190412 12:46:43.237" starttime="20190412 12:46:43.185"></status>
+</kw>
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<arguments>
+<arg>0.2 seconds</arg>
+</arguments>
+<status status="PASS" endtime="20190412 12:46:43.238" starttime="20190412 12:46:43.238"></status>
+</kw>
+<kw name="HandlingLoadingImage" library="Curis_Keywords">
+<arguments>
+<arg>${MediumWait}</arg>
+</arguments>
+<kw name="Wait Until Element Is Not Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is not visible.</doc>
+<arguments>
+<arg>${sLoadingImage}</arg>
+<arg>${DelayTime}</arg>
+</arguments>
+<status status="PASS" endtime="20190412 12:46:44.270" starttime="20190412 12:46:43.238"></status>
+</kw>
+<status status="PASS" endtime="20190412 12:46:44.270" starttime="20190412 12:46:43.238"></status>
+</kw>
+<status status="PASS" endtime="20190412 12:46:44.270" starttime="20190412 12:46:38.149"></status>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<doc>Logs the given message to the console.</doc>
+<arguments>
+<arg>DONE!!!</arg>
+</arguments>
+<status status="PASS" endtime="20190412 12:46:44.272" starttime="20190412 12:46:44.271"></status>
+</kw>
+<kw name="Navigate To Appointment Search Page" library="Curis_Keywords">
+<doc>Navigate to Appointment Nav and then to appointment search page</doc>
+<kw name="NavigateToLeftNavMenu" library="Curis_Keywords">
+<arguments>
+<arg>${sAppointmentNav}</arg>
+<arg>${sAppointmentSearch}</arg>
+</arguments>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${sLeftMenu}</arg>
+</arguments>
+<status status="PASS" endtime="20190412 12:46:45.341" starttime="20190412 12:46:44.273"></status>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<doc>Simulates hovering mouse over the element ``locator``.</doc>
+<arguments>
+<arg>${sLeftMenu}</arg>
+</arguments>
+<msg timestamp="20190412 12:46:45.341" level="INFO">Simulating Mouse Over on element 'jquery=#leftMenu'.</msg>
+<status status="PASS" endtime="20190412 12:46:45.791" starttime="20190412 12:46:45.341"></status>
+</kw>
+<kw name="Run Keyword And Return Status" library="BuiltIn">
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<arguments>
+<arg>Element Should Be Enabled</arg>
+<arg>${LeftNavChild}</arg>
+</arguments>
+<assign>
+<var>${IsNavExpand}</var>
+</assign>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<doc>Verifies that element identified with ``locator`` is enabled.</doc>
+<arguments>
+<arg>${LeftNavChild}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190412 12:46:46.649" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190412 12:46:46.650" starttime="20190412 12:46:45.996"></status>
+</kw>
+<msg timestamp="20190412 12:46:46.652" level="FAIL">Element with locator 'jquery=[id='curis.appointment.search']' not found.</msg>
+<status status="FAIL" endtime="20190412 12:46:46.652" starttime="20190412 12:46:45.791"></status>
+</kw>
+<msg timestamp="20190412 12:46:46.653" level="INFO">${IsNavExpand} = False</msg>
+<status status="PASS" endtime="20190412 12:46:46.653" starttime="20190412 12:46:45.791"></status>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<arguments>
+<arg>${IsNavExpand}==False</arg>
+<arg>Click Element</arg>
+<arg>${LeftNav}</arg>
+</arguments>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${LeftNav}</arg>
+</arguments>
+<msg timestamp="20190412 12:46:46.653" level="INFO">Clicking element 'jquery=[id='curis.appointment']'.</msg>
+<status status="PASS" endtime="20190412 12:46:47.157" starttime="20190412 12:46:46.653"></status>
+</kw>
+<status status="PASS" endtime="20190412 12:46:47.157" starttime="20190412 12:46:46.653"></status>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` appears on current page.</doc>
+<arguments>
+<arg>${LeftNavChild}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190412 12:46:53.070" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190412 12:46:53.070" starttime="20190412 12:46:52.443"></status>
+</kw>
+<msg timestamp="20190412 12:46:53.071" level="FAIL">Element 'jquery=[id='curis.appointment.search']' did not appear in 5 seconds.</msg>
+<status status="FAIL" endtime="20190412 12:46:53.071" starttime="20190412 12:46:47.157"></status>
+</kw>
+<status status="FAIL" endtime="20190412 12:46:53.071" starttime="20190412 12:46:44.272"></status>
+</kw>
+<status status="FAIL" endtime="20190412 12:46:53.071" starttime="20190412 12:46:44.272"></status>
+</kw>
+<kw type="teardown" name="Run Keywords" library="BuiltIn">
+<doc>Executes all the given keywords in a sequence.</doc>
+<arguments>
+<arg>Logout</arg>
+<arg>Close All Browsers</arg>
+</arguments>
+<kw name="Logout" library="Curis_Keywords">
+<doc>Logout the user from the application</doc>
+<kw name="Log" library="BuiltIn">
+<doc>Logs the given message with the given level.</doc>
+<arguments>
+<arg>Logout as admin</arg>
+</arguments>
+<msg timestamp="20190412 12:46:53.073" level="INFO">Logout as admin</msg>
+<status status="PASS" endtime="20190412 12:46:53.073" starttime="20190412 12:46:53.073"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>${sProfileImgIcon}</arg>
+<arg>3 Seconds</arg>
+</arguments>
+<status status="PASS" endtime="20190412 12:46:53.504" starttime="20190412 12:46:53.073"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${sProfileImgIcon}</arg>
+</arguments>
+<msg timestamp="20190412 12:46:53.504" level="INFO">Clicking element 'jquery=.user-image'.</msg>
+<status status="PASS" endtime="20190412 12:46:53.955" starttime="20190412 12:46:53.504"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>${sLogoutBtn}</arg>
+</arguments>
+<msg timestamp="20190412 12:46:53.955" level="INFO">Clicking element 'jquery=.user-footer div:contains('Logout'):nth-child(2)'.</msg>
+<status status="PASS" endtime="20190412 12:46:54.426" starttime="20190412 12:46:53.955"></status>
+</kw>
+<status status="PASS" endtime="20190412 12:46:54.426" starttime="20190412 12:46:53.072"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20190412 12:46:56.756" starttime="20190412 12:46:54.426"></status>
+</kw>
+<status status="PASS" endtime="20190412 12:46:56.756" starttime="20190412 12:46:53.072"></status>
+</kw>
+<status status="FAIL" endtime="20190412 12:46:56.757" critical="yes" starttime="20190412 12:46:38.149">Element 'jquery=[id='curis.appointment.search']' did not appear in 5 seconds.</status>
+</test>
+<status status="FAIL" endtime="20190412 12:46:56.759" starttime="20190412 12:46:37.825"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="CurisTestSuite" pass="0">CurisTestSuite</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
