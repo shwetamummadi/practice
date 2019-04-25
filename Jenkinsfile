@@ -1,6 +1,6 @@
-Pipeline{
+pipeline{
 agent any{
-stage{
+steps{
     print 'Hello World!'
     build 'GitCode'
     }
