@@ -16,7 +16,7 @@ Test Teardown    Run Keywords
     # Open Excel Document Sheet 
     # Get Username From Excel Sheet For Sample Testcase      
     
- Popup Handling And Switch Window
+Popup Handling And Switch Window
      Navigate To Patients RegPage
      Patients PersonalDetails Reg Form MandatoryFields
      HandlingLoadingImage    
@@ -26,7 +26,7 @@ Test Teardown    Run Keywords
      If Patients Details Already Exists Click On Yes Button
      Switch To Application Window
      HandlingLoadingImage 
-     # ${staus}    Run Keyword And Return Status    Page Should Contain Element    #jquery=.toast-title  
+     # ${staus}    Run Keyword And Return Status    Page Should Contain Element    jquery=.toast-title  
      Verify Successfull Registration Popup Message
      Close Registation Success message Popup
 
