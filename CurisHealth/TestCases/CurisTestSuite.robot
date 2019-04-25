@@ -16,19 +16,19 @@ Test Teardown    Run Keywords
     # Open Excel Document Sheet 
     # Get Username From Excel Sheet For Sample Testcase      
     
-# Popup Handling And Switch Window
-    # Navigate To Patients RegPage
-    # Patients PersonalDetails Reg Form MandatoryFields
-    # HandlingLoadingImage    
-    # Patients Communication Details Reg Form MandatoryFields
-    # HandlingLoadingImage
-    # Save The Registration Form
-    # If Patients Details Already Exists Click On Yes Button
-    # Switch To Application Window
-    # HandlingLoadingImage 
-    # # ${staus}    Run Keyword And Return Status    Page Should Contain Element    jquery=.toast-title  
-    # Verify Successfull Registration Popup Message
-    # Close Registation Success message Popup
+ Popup Handling And Switch Window
+     Navigate To Patients RegPage
+     Patients PersonalDetails Reg Form MandatoryFields
+     HandlingLoadingImage    
+     Patients Communication Details Reg Form MandatoryFields
+     HandlingLoadingImage
+     Save The Registration Form
+     If Patients Details Already Exists Click On Yes Button
+     Switch To Application Window
+     HandlingLoadingImage 
+     # ${staus}    Run Keyword And Return Status    Page Should Contain Element    #jquery=.toast-title  
+     Verify Successfull Registration Popup Message
+     Close Registation Success message Popup
 
 TS016 Appointment Search With Date Fields 
     Navigate To Appointment Search Page 
