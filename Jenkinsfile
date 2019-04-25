@@ -1,8 +1,11 @@
-pipeline{
-agent any{
-steps{
-    print 'Hello World!'
-    build 'GitCode'
+pipeline {
+    agent any
+    stages {
+        stage('Example') {
+            steps { 
+                echo 'Hello World!'
+               build 'GitCode
+            }
+        }
     }
-  }
 }
