@@ -30,19 +30,19 @@ Popup Handling And Switch Window
      Verify Successfull Registration Popup Message
      Close Registation Success message Popup
 
-TS016 Appointment Search With Date Fields 
-    Navigate To Appointment Search Page 
-    HandlingLoadingImage   
-    Input Date in FromDate Field  
-    Input Date in ToDate Field    
-    Click On Search Btn  
-    HandlingLoadingImage  
-    ${ApptmtSearchPopup}    Verify Appointment No records Popup      
-    Run Keyword If     ${ApptmtSearchPopup}==True
-    ...    Click on close btn in popup
-    ...    ELSE
-    ...    Verify Page should contain appointments list grid
-    Log To Console    DONE!!!    
+# TS016 Appointment Search With Date Fields 
+   # Navigate To Appointment Search Page 
+   # HandlingLoadingImage   
+   # Input Date in FromDate Field  
+   # Input Date in ToDate Field    
+   # Click On Search Btn  
+   # HandlingLoadingImage  
+   # ${ApptmtSearchPopup}    Verify Appointment No records Popup      
+   # Run Keyword If     ${ApptmtSearchPopup}==True
+   # ...    Click on close btn in popup
+   # ...    ELSE
+   # ...    Verify Page should contain appointments list grid
+   # Log To Console    DONE!!!    
 
 
 # Table Handling Accessing Data From Table Perform Actions In Table Cells 
