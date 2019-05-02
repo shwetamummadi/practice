@@ -8,7 +8,7 @@ pipeline {
             }
         }
         stage('Post Build Actions') {
-            step([
+            step{
         $class           : 'hudson.plugins.robot.RobotPublisher',
         outputPath       : 'portfolio-app\\target\\robot-output\\' + type,
         passThreshold    : 100,
@@ -17,7 +17,7 @@ pipeline {
         reportFileName   : '*\\report*.html',
         logFileName      : '*\\log*.html',
         outputFileName   : '*\\output*.xml'
-])
+            }
         }
     }
 }
