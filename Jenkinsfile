@@ -10,15 +10,15 @@ pipeline {
     }
     post {
                 always {
-                    junit '**/output.xml'
+                    junit '***/output.xml'
                     script {
                         envs.each {
                             step([$class: "RobotPublisher",
                                         disableArchiveOutput: false,
                                         otherFiles: "",
-                                        outputFileName  : "**/output.xml",
-                                        reportFileName  : '**/report.html',
-                                        logFileName     : '**/log.html',
+                                        outputFileName  : "***/output.xml",
+                                        reportFileName  : '***/report.html',
+                                        logFileName     : '***/log.html',
                                         passThreshold: 100,
                                         unstableThreshold: 0]) 
                         }
