@@ -8,7 +8,7 @@ pipeline {
             }
         }
         stage('Post Build Actions') {
-            step{
+            steps {
         $class           : 'hudson.plugins.robot.RobotPublisher',
         outputPath       : 'portfolio-app\\target\\robot-output\\' + type,
         passThreshold    : 100,
