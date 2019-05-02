@@ -1,10 +1,10 @@
 pipeline {
     agent any
     stages {
-        stage('Example') {
+        stage('Testing Stage') {
             steps { 
                 echo 'Hello World!'
-               build 'GitCode'
+                build 'test'
             }
         }
     }
