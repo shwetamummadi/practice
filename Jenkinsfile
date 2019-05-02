@@ -20,7 +20,7 @@ pipeline {
                                         reportFileName  : '**/report.html',
                                         logFileName     : '**/log.html',
                                         passThreshold: 100,
-                                        unstableThreshold: 0])
+                                        unstableThreshold: 0]) 
                         }
                     }
                 }
