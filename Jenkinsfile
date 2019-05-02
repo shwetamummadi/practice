@@ -10,6 +10,7 @@ pipeline {
     }
     post {
                 always {
+                    junit '**/output.xml'
                     script {
                         envs.each {
                             step([$class: "RobotPublisher",
