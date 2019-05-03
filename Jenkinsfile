@@ -5,7 +5,7 @@ pipeline {
             steps { 
                 echo 'Hello World!'
                 git 'https://github.com/shwetamummadi/practice.git' 
-                bat 'dir'
+                bat 'CurisHealth'
             }
         }
     }
