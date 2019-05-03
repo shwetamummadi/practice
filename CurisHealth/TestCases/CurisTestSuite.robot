@@ -28,7 +28,7 @@ Popup Handling And Switch Window
      HandlingLoadingImage 
      # ${staus}    Run Keyword And Return Status    Page Should Contain Element    jquery=.toast-title  
      # Verify Successfull Registration Popup Message
-     Close Registation Success message Popup
+     # Close Registation Success message Popup
 
 # TS016 Appointment Search With Date Fields 
    # Navigate To Appointment Search Page 
