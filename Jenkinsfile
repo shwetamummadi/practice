@@ -7,5 +7,10 @@ pipeline {
                 bat 'dir'
             }
         }
+        stage('Build'){
+            steps {
+                bat 'dir'
+            }
+        }
     }
 }
