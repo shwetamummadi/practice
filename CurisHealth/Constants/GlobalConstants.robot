@@ -1,6 +1,6 @@
 *** Variables ***
 ${AppUrl}    http://ggk-wrl-cs-2:8095/ehr-webapp/#/login
-${GoogleBrowser}    ff
+${GoogleBrowser}    chrome
 ${UserName}    admin
 ${Pasword}    curis@123
 ${VeryShortWait}    1 seconds
