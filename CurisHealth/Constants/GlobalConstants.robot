@@ -3,9 +3,9 @@ ${AppUrl}    http://ggk-wrl-cs-2:8095/ehr-webapp/#/login
 ${GoogleBrowser}    chrome
 ${UserName}    admin
 ${Pasword}    curis@123
-${VeryShortWait}    1 seconds
-${shortWait}    3 seconds
-${MediumWait}    6 seconds
+${VeryShortWait}    3 seconds
+${shortWait}    5 seconds
+${MediumWait}    10 seconds
 ${RegType}    External    Newborn    Normal
 
 #====================================
